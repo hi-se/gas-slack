@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES2019",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    /* Transpiling with TypeScript: */
+    "module": "NodeNext",
+    "outDir": "build",
+    "sourceMap": true,
+    /* lib */
+    "lib": [
+      "es2022"
+    ]
+  },
+  "exclude": [
+    "rollup.config.js",
+    "babel.config.js",
+    "eslint.config.js"
+  ]
+}
