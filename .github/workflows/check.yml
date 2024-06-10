@@ -41,3 +41,27 @@ jobs:
         run: pnpm install
       - name: Lint
         run: pnpm lint
+  check-if-dist-updated:
+    name: Check if dist updated
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm build
+      - name: Check for changes in dist/index.js
+        id: check_changes
+        run: |
+          if git diff --quiet dist/index.js; then
+            echo "No changes in dist/index.js"
+          else
+            echo "Changes detected in dist/index.js"
+            exit 1
+          fi

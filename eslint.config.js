@@ -15,7 +15,7 @@ export default tseslint.config(
         tsconfigRootDir: import.meta.dirname,
       },
     },
-    ignores: ["rollup.config.js", "babel.config.js", "eslint.config.js"],
+    ignores: ["rollup.config.js", "babel.config.js", "eslint.config.js", "dist/**/*", "node_modules/**/*"],
   },
   {
     plugins: {
@@ -26,6 +26,12 @@ export default tseslint.config(
       "@typescript-eslint/no-import-type-side-effects": "error",
       "@typescript-eslint/no-confusing-void-expression": "off",
       "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+        },
+      ],
     },
   },
   {

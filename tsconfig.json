@@ -13,10 +13,9 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    /* Transpiling with TypeScript: */
-    "module": "NodeNext",
-    "outDir": "build",
-    "sourceMap": true,
+    /* Transpiling */
+    "module": "preserve",
+    "noEmit": true,
     /* lib */
     "lib": [
       "es2022"

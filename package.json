@@ -1,21 +1,17 @@
 {
-  "name": "gas-template",
+  "name": "gas-slack",
   "version": "1.0.0",
   "description": "",
   "license": "UNLICENSED",
   "private": true,
   "type": "module",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint src/**/*.ts",
     "lint-fix": "pnpm lint --fix",
     "format": "prettier --write src/**/*.ts",
     "type-check": "tsc --noEmit",
-    "build": "rollup -c",
-    "open:dev": "clasp_config_project=.clasp.dev.json clasp open",
-    "open:prod": "clasp_config_project=.clasp.prod.json clasp open",
-    "buildpush:prod": "pnpm run build && cp appsscript.json build/appsscript.json && clasp_config_project=.clasp.prod.json clasp push --force",
-    "buildpush:dev": " pnpm run build && cp appsscript.json build/appsscript.json && clasp_config_project=.clasp.dev.json clasp push --force",
-    "postinstall": "mkdir -p build && cp appsscript.json build/appsscript.json"
+    "build": "rollup -c"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
@@ -25,6 +21,7 @@
     "@eslint/js": "^9.4.0",
     "@google/clasp": "^2.4.2",
     "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/eslint__js": "^8.42.3",
@@ -39,5 +36,10 @@
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.12.0"
   },
-  "packageManager": "pnpm@9.2.0+sha512.98a80fd11c2e7096747762304106432b3ddc67dcf54b5a8c01c93f68a2cd5e05e6821849522a06fb76284d41a2660d5e334f2ee3bbf29183bf2e739b1dafa771"
+  "packageManager": "pnpm@9.2.0+sha512.98a80fd11c2e7096747762304106432b3ddc67dcf54b5a8c01c93f68a2cd5e05e6821849522a06fb76284d41a2660d5e334f2ee3bbf29183bf2e739b1dafa771",
+  "dependencies": {
+    "@babel/runtime": "^7.24.7",
+    "@slack/web-api": "^7.0.4",
+    "eventemitter3": "^5.0.1"
+  }
 }
