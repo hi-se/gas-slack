@@ -10,16 +10,22 @@ export default {
   input: "./src/index.ts",
   output: {
     dir: "dist",
-    format: "cjs",
+    format: "esm",
     name: "gas-slack",
+    sourcemap: true,
   },
   onwarn(warning, warn) {
     if (warning.code === "THIS_IS_UNDEFINED") return;
     warn(warning);
   },
   plugins: [
-    typescript(),
-    commonjs(),
+    typescript({
+      declaration: true,
+      declarationDir: "./dist/types",
+    }),
+    commonjs({
+      transformMixedEsModules: true,
+    }),
     babel({
       extensions,
       babelHelpers: "runtime",

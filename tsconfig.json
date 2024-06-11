@@ -14,9 +14,6 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     /* Transpiling */
-    "declaration": true,
-    "outDir": "dist",
-    "sourceMap": true,
     "module": "preserve",
     "noEmit": true,
     /* lib */
