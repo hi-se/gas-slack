@@ -1,2 +1,2 @@
 export { GasSlackClient } from "./app.js";
-export * from "./methods.js";
+export type * from "@slack/web-api";
