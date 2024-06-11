@@ -11,12 +11,7 @@
     "lint-fix": "pnpm lint --fix",
     "format": "prettier --write src/**/*.ts",
     "type-check": "tsc --noEmit",
-    "build": "rollup -c",
-    "open:dev": "clasp_config_project=.clasp.dev.json clasp open",
-    "open:prod": "clasp_config_project=.clasp.prod.json clasp open",
-    "buildpush:prod": "pnpm run build && cp appsscript.json build/appsscript.json && clasp_config_project=.clasp.prod.json clasp push --force",
-    "buildpush:dev": " pnpm run build && cp appsscript.json build/appsscript.json && clasp_config_project=.clasp.dev.json clasp push --force",
-    "postinstall": "mkdir -p build && cp appsscript.json build/appsscript.json"
+    "build": "rollup -c"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
