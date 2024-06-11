@@ -1,1 +1,1 @@
-export { GasWebClient } from "./app.js";
+export { GasSlackClient } from "./app.js";

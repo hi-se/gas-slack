@@ -2,7 +2,7 @@ import type { FilesUploadV2Arguments, WebAPICallResult } from "@slack/web-api";
 
 import { Methods } from "./methods";
 
-export class GasWebClient extends Methods {
+export class GasSlackClient extends Methods {
   public filesUploadV2(_options: FilesUploadV2Arguments): Promise<WebAPICallResult> {
     throw new Error("Method not implemented.");
   }
