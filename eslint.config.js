@@ -15,7 +15,7 @@ export default tseslint.config(
         tsconfigRootDir: import.meta.dirname,
       },
     },
-    ignores: ["rollup.config.js", "babel.config.js", "eslint.config.js"],
+    ignores: ["rollup.config.js", "babel.config.js", "eslint.config.js", "dist/**/*", "node_modules/**/*"],
   },
   {
     plugins: {

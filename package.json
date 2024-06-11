@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "private": true,
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint src/**/*.ts",
     "lint-fix": "pnpm lint --fix",
@@ -26,6 +26,7 @@
     "@eslint/js": "^9.4.0",
     "@google/clasp": "^2.4.2",
     "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/eslint__js": "^8.42.3",
