@@ -5,6 +5,7 @@
   "license": "UNLICENSED",
   "private": true,
   "type": "module",
+  "main": "src/index.ts",
   "scripts": {
     "lint": "eslint src/**/*.ts",
     "lint-fix": "pnpm lint --fix",
