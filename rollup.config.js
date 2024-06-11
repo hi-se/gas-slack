@@ -21,7 +21,7 @@ export default {
   plugins: [
     typescript({
       declaration: true,
-      declarationDir: "./dist/types",
+      declarationDir: "./dist",
     }),
     commonjs({
       transformMixedEsModules: true,
